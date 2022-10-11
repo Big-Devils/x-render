@@ -184,7 +184,7 @@ const searchPeople = async (params) => {
   const result = await getPeopleData(params);
   return {
     rows: result.list,
-    rows: result.totla,
+    totla: result.totla,
   }
 }
 
@@ -256,7 +256,7 @@ TableRender 封装了一些常用的值类型来减少重复的 render 操作，
 ```js
 const columns = [
   {
-    title: '酒店状态'
+    title: '酒店状态'可以通过数组形式传
     dataIndex: 'state',
     enum: {
       open: '营业中',   // 自动将 open 转换为 营业中
